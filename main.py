@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Created by: Daniel Pawelko
-# Created on: Nov 2021
+# Created on: Dec 2021
 # Do while loop
 
 
@@ -16,15 +16,19 @@ def main():
     number = input("Enter a positive integer: ")
     number = int(number)
 
-    # process
-    while True:
-        counter += 1
-        product_num *= counter
-        if counter >= number:
-            break
-
-    # output
-    print(f"The product of all positive numbers from 1 to {number} is {product_num}.")
+    # process/output
+    if number <= 0:
+        if number == 0:
+            print("0! = 1")
+        else:
+            print("Input must be a positive integer")
+    else:
+        while True:
+            counter += 1
+            product_num *= counter
+            if counter >= number:
+                break
+        print(f"{number}! = {product_num}.")
 
     # done
     print("")
